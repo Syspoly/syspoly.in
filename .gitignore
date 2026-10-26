@@ -1,0 +1,27 @@
+# Node / NPM
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Secrets
+.env
+.env.local
+.env.production
+*.env
+
+# Client Build
+client/dist/
+client/dist-ssr/
+client/*.local
+
+# Server Uploads / Logs
+server/uploads/*
+!server/uploads/.gitkeep
+server/logs/
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

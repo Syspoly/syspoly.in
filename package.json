@@ -1,0 +1,28 @@
+{
+  "name": "syspoly-mern",
+  "version": "1.0.0",
+  "description": "Production-Ready MERN IT Services Web Application for System Polygon Pvt. Ltd.",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,magenta\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "install:all": "cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "express",
+    "mongodb",
+    "syspoly",
+    "it-services"
+  ],
+  "author": "System Polygon Pvt. Ltd.",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}

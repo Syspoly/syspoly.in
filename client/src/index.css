@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom Sleek Light Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F8FAFC;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0082C8;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00529B;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 4px 20px -2px rgba(0, 130, 200, 0.06);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    background: #FFFFFF;
+    border-color: rgba(0, 130, 200, 0.35);
+    box-shadow: 0 16px 36px -8px rgba(0, 130, 200, 0.18);
+    transform: translateY(-4px);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700;
+  }
+
+  .text-gradient-electric {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#00529B] via-[#0082C8] to-[#00A3E0];
+  }
+
+  .bg-grid-pattern {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(0, 130, 200, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 130, 200, 0.04) 1px, transparent 1px);
+  }
+
+  .shadow-glow-blue {
+    box-shadow: 0 4px 20px -2px rgba(0, 130, 200, 0.35);
+  }
+}
